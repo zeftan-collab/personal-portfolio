@@ -2,7 +2,7 @@
 
 A responsive personal portfolio website for a 4th-year BSIT student at La Consolacion University Philippines (LCUP). It showcases my background, technical skills, projects, and achievements.
 
-**Live site:** https://YOUR-PROJECT.vercel.app
+**Live site:** https://personal-portfolio-self-one-70.vercel.app/
 
 ## Sections
 
