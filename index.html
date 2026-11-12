@@ -34,7 +34,7 @@ tailwind.config = { theme: { extend: {
 </div>
 
 <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
-  <nav class="bg-[#120e17]/90 backdrop-blur-md border border-twilight-border px-4 sm:px-6 py-3 rounded-3xl md:rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.6)] max-w-5xl w-full">
+  <nav class="site-nav bg-[#120e17]/90 backdrop-blur-md border border-twilight-border px-4 sm:px-6 py-3 rounded-3xl md:rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.6)] max-w-5xl w-full">
     <div class="flex items-center justify-between gap-4">
       <a href="#home" class="w-11 h-11 rounded-full bg-gradient-to-tr from-rose-deep to-rose-glow flex items-center justify-center text-white font-fairytale font-bold shadow-rose-glow" aria-label="Home">ZT</a>
       <div class="hidden md:flex items-center gap-1 text-xs tracking-widest uppercase font-medium">
@@ -47,6 +47,7 @@ tailwind.config = { theme: { extend: {
       </div>
       <div class="flex items-center gap-3">
         <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-rose-deep to-rose-glow shadow-rose-glow hover:brightness-110 transition">Get In Touch <i class="fa-solid fa-wand-magic-sparkles text-[11px]"></i></a>
+        <button id="theme-toggle" type="button" class="w-9 h-9 rounded-full border border-twilight-border bg-twilight-card flex items-center justify-center text-parchment-muted hover:text-rose-glow transition" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
         <a href="https://github.com/zeftan-collab" target="_blank" rel="noopener" class="w-9 h-9 rounded-full border border-twilight-border bg-twilight-card flex items-center justify-center text-parchment-muted hover:text-rose-glow transition" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <button id="menu-btn" class="md:hidden w-9 h-9 rounded-full border border-twilight-border bg-twilight-card text-parchment-muted" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
       </div>
@@ -67,7 +68,7 @@ tailwind.config = { theme: { extend: {
 <section id="home" class="min-h-[85vh] flex flex-col justify-center items-center py-16">
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
     <div class="lg:col-span-7 text-center lg:text-left space-y-6">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full parchment-tag text-xs font-medium text-rose-glow tracking-wider">🌸 Driven by curiosity, inspired by innovation.</div>
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full parchment-tag text-xs font-medium text-rose-glow tracking-wider"><button type="button" class="flower-bloom" aria-label="Bloom flower">🌸</button> Driven by curiosity, inspired by innovation.</div>
       <p class="font-serif italic text-xl md:text-2xl text-rose-soft/90">Welcome! I'm <span class="font-fairytale text-white border-b border-rose-deep/50">Zofia Elisse F. Tan</span></p>
       <h1 class="font-fairytale text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">BSIT <span class="bg-gradient-to-r from-rose-glow via-pink-300 to-rose-deep bg-clip-text text-transparent">Student</span> &amp; Tech Dreamer</h1>
       <p class="text-parchment-muted text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">A person with a passion for technology and a dream of becoming a successful IT professional. I aspire to turn ideas into meaningful digital experiences, bring websites to life, and continuously expand my knowledge and skills in the ever-evolving field of Information Technology.</p>
@@ -90,7 +91,7 @@ tailwind.config = { theme: { extend: {
             <img src="images/profile.jpg" alt="Portrait of Zofia Elisse F. Tan" class="w-full h-full rounded-full object-cover">
           </div>
         </div>
-        <div class="absolute -bottom-2 -left-4 px-4 py-2 rounded-2xl bg-twilight-card/90 border border-rose-glow/40 backdrop-blur-md flex items-center gap-3 z-30"><span class="text-xl">🌸</span><div><p class="text-[11px] font-bold text-white uppercase tracking-wider">BSIT Scholar</p><p class="text-[10px] text-rose-glow font-medium">4th Year LCUP</p></div></div>
+        <div class="absolute -bottom-2 -left-4 px-4 py-2 rounded-2xl bg-twilight-card/90 border border-rose-glow/40 backdrop-blur-md flex items-center gap-3 z-30"><button type="button" class="flower-bloom text-xl" aria-label="Bloom flower">🌸</button><div><p class="text-[11px] font-bold text-white uppercase tracking-wider">BSIT Scholar</p><p class="text-[10px] text-rose-glow font-medium">4th Year LCUP</p></div></div>
         <div class="absolute top-4 -right-2 px-3.5 py-1.5 rounded-full bg-twilight-card/90 border border-moss-500/50 backdrop-blur-md flex items-center gap-2 z-30"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span><span class="text-[11px] text-moss-300 font-medium">Open for Opportunities</span></div>
       </div>
     </div>
@@ -156,8 +157,8 @@ tailwind.config = { theme: { extend: {
     <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-rose-glow to-transparent mx-auto"></div>
     <p class="text-parchment-muted text-sm">Certifications, verified skill badges, and professional development seminars.</p>
   </div>
-  <h3 class="font-fairytale text-xl text-white font-semibold mb-6">📜 Verified Certifications</h3>
-  <div id="cert-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14"></div>
+  <h3 class="font-fairytale text-xl text-white font-semibold text-center mb-6">📜 Verified Certifications</h3>
+  <div id="cert-grid" class="max-w-4xl mx-auto mb-14"></div>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <div class="bg-[#141018]/90 border border-twilight-border rounded-3xl p-6 sm:p-8 space-y-6">
       <h3 class="font-fairytale text-lg text-white font-semibold">🎖️ Verified Digital Badges</h3>

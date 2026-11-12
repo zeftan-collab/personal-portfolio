@@ -1,4 +1,3 @@
-/* ============ CONTENT DATA (edit text here) ============ */
 const education = [
   { dot: 'bg-rose-glow', chip: 'bg-rose-deep/30 text-rose-soft border-rose-glow/30', sub: 'text-rose-glow', date: '2023 — Present (4th Year)', school: 'La Consolacion University Philippines (LCUP)', level: 'Bachelor of Science in Information Technology (BSIT)', note: 'Currently completing 4th-year capstone development, advanced web applications, user interface research, and campus-wide software solutions.' },
   { dot: 'bg-moss-500', chip: 'bg-moss-800/60 text-moss-300 border-moss-500/30', sub: 'text-moss-300', date: 'Graduated June 2023', school: 'Assumpta Academy, Bulacan, Inc.', level: 'Senior High School', note: 'Strengthened academic foundations, computer literacy, and team collaboration.' },
@@ -27,13 +26,13 @@ const skillCategories = {
 
 const projects = [
   { title: 'Campus Lost and Found System', img: 'images/project-lostfound.jpg', badge: 'Capstone', hover: 'text-moss-300', badgeColor: 'text-moss-300 border-moss-500/30', foot: '🎓 LCUP Community', category: 'Capstone Project', tags: ['PHP', 'MySQL', 'LCUP Portal'], desc: 'A campus-friendly system designed to help the LCUP community report, search for, and manage lost and found belongings.' },
-  { title: 'Student Attendance Monitoring', img: 'images/project-attendance.jpg', badge: 'App Dev', hover: 'text-pink-300', badgeColor: 'text-pink-300 border-pink-500/30', foot: '📋 Records Manager', category: 'Desktop Application', tags: ['C# / .NET', 'Database', 'Desktop App'], desc: 'A simple application that allows professors to monitor student attendance and manage attendance records efficiently.' },
+  { title: 'Student Attendance Monitoring', img: 'images/project-attendance.jpg', badge: 'App Dev', hover: 'text-pink-300', badgeColor: 'text-pink-300 border-pink-500/30', foot: '📋 Records Manager', category: 'Desktop Application', tags: ['Kotlin/Java', 'Database', 'Desktop App'], desc: 'A simple application that allows professors to monitor student attendance and manage attendance records efficiently.' },
   { title: 'Café Website Design – Figma', img: 'images/project-cafe.jpg', badge: 'Figma UI/UX', hover: 'text-amber-300', badgeColor: 'text-amber-300 border-amber-500/30', foot: '📐 Design Concept', category: 'Figma Prototype', tags: ['Figma', 'UI/UX', 'Wireframing'], desc: 'A conceptual coffee shop website design focused on creating an appealing layout and user-friendly interface.' }
 ];
 
 const certs = [
   { img: 'images/cert-mos.jpg', issuer: 'Microsoft Certified', color: 'text-rose-glow', title: 'MOS: Excel Associate (Office 2019)', desc: 'Fundamental understanding of Excel: cell formatting, references, formulas, and workbook organization.' },
-  { img: 'images/cert-html-css.jpg', issuer: 'Top 25% Rank', color: 'text-emerald-400', title: 'HTML/CSS Certification', desc: 'Evaluated through work-sample testing to verify real-world markup and styling skills.' },
+  { img: 'images/cert-html-css.jpg', issuer: 'TestDome', color: 'text-emerald-400', title: 'HTML/CSS Certification', desc: 'Evaluated through work-sample testing to verify real-world markup and styling skills.' },
   { img: 'images/cert-security.jpg', issuer: 'CloudSwyft & Microsoft', color: 'text-sky-400', title: 'Enterprise Security', desc: 'Completed in partnership with LCUP Center for Lifelong Learning, exploring enterprise protection principles.' },
   { img: 'images/cert-csharp.jpg', issuer: 'freeCodeCamp & Microsoft', color: 'text-pink-300', title: 'Foundational C# Certification', desc: 'Verifies syntax logic, variables, conditionals, and object-oriented C# patterns.' }
 ];
@@ -55,12 +54,11 @@ const contacts = [
   { icon: 'fa-location-dot', label: 'Location & University', text: 'Malolos Bulacan, Philippines (LCUP)' }
 ];
 
-/* ============ RENDERING ============ */
 const $ = (id) => document.getElementById(id);
 
-$('education').innerHTML = education.map(e => `
+$('education').innerHTML = education.map((e, index) => `
   <div class="relative pl-6 group">
-    <div class="absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full ${e.dot} border-2 border-twilight group-hover:scale-125 transition"></div>
+    <div class="education-marker absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full ${e.dot} border-2 border-twilight group-hover:scale-125 transition" style="--education-delay: ${index * 450}ms"></div>
     <span class="inline-block px-3 py-0.5 rounded-full text-[11px] font-semibold border mb-1 ${e.chip}">${e.date}</span>
     <h4 class="text-base font-bold text-white font-fairytale">${e.school}</h4>
     <p class="${e.sub} text-xs font-medium">${e.level}</p>
@@ -101,6 +99,15 @@ $('skill-tabs').addEventListener('click', (e) => {
 });
 selectSkill('web-dev');
 
+document.querySelectorAll('.flower-bloom').forEach(flower => {
+  flower.addEventListener('click', () => {
+    flower.classList.remove('is-blooming');
+    void flower.offsetWidth;
+    flower.classList.add('is-blooming');
+  });
+  flower.addEventListener('animationend', () => flower.classList.remove('is-blooming'));
+});
+
 const cornerVine = `<svg viewBox="0 0 140 140" fill="none" class="absolute top-0 left-0 w-28 h-28 z-20 pointer-events-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"><path d="M-4 12 C18 6, 44 14, 52 35 C58 52, 42 70, 36 88 C30 106, 40 120, 48 138" stroke="#3e5c38" stroke-width="3" stroke-linecap="round"/><path d="M22 20 Q34 6 50 14 Q38 30 22 20 Z" fill="#2e522b" stroke="#5f9964"/><path d="M50 34 Q68 28 66 46 Q48 52 50 34 Z" fill="#43723d" stroke="#7ec279"/><path d="M38 60 Q20 54 26 72 Q44 74 38 60 Z" fill="#2d4a2b" stroke="#5a8c56"/><path d="M34 88 Q48 80 54 96 Q38 106 34 88 Z" fill="#3f6b39" stroke="#71ad6a"/><circle cx="22" cy="20" r="2.5" fill="#ff7eb3"/></svg>`;
 
 $('project-grid').innerHTML = projects.map((p, i) => `
@@ -122,21 +129,71 @@ $('project-grid').innerHTML = projects.map((p, i) => `
     </div>
   </article>`).join('');
 
-$('cert-grid').innerHTML = certs.map((c, i) => `
-  <div class="bg-gradient-to-b from-[#18131d] to-twilight-card border border-twilight-border hover:border-rose-glow/60 p-5 rounded-3xl transition duration-300 hover:-translate-y-1.5 group flex flex-col justify-between">
-    <div>
-      <div class="h-44 rounded-2xl overflow-hidden bg-black/50 border border-twilight-border mb-4"><img src="${c.img}" alt="${c.title} certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
-      <span class="text-[10px] font-semibold ${c.color} uppercase tracking-wider">${c.issuer}</span>
-      <h4 class="font-fairytale text-sm text-white font-bold mt-1">${c.title}</h4>
-      <p class="text-parchment-muted text-xs mt-2 leading-relaxed">${c.desc}</p>
+const certificateGrid = $('cert-grid');
+certificateGrid.innerHTML = `
+  <div class="certificate-gallery">
+    <div class="certificate-gallery-frame">
+      <div id="certificate-viewport" class="certificate-viewport" role="region" aria-label="Certification gallery. Scroll vertically or use the arrow keys to browse." tabindex="0">
+        ${certs.map((c, index) => `
+          <article class="certificate-slide bg-gradient-to-b from-[#18131d] to-twilight-card border border-twilight-border rounded-3xl">
+            <div class="certificate-artwork">
+              <button type="button" data-image-preview class="cursor-zoom-in" aria-label="View ${c.title} certificate full size">
+                <img src="${c.img}" alt="${c.title} certificate">
+              </button>
+            </div>
+            <div class="certificate-information">
+              <span class="text-[10px] font-semibold ${c.color} uppercase tracking-wider">${c.issuer}</span>
+              <h4 class="font-fairytale text-xl text-white font-bold mt-2">${c.title}</h4>
+              <p class="text-parchment-muted text-sm mt-3 leading-relaxed">${c.desc}</p>
+              <span class="certificate-exhibit-label">CERTIFICATION EXHIBIT ${String(index + 1).padStart(2, '0')}</span>
+            </div>
+          </article>`).join('')}
+      </div>
+      <div class="certificate-navigation">
+        <button type="button" id="certificate-previous" class="certificate-arrow" aria-label="Previous certificate">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </button>
+        <span id="certificate-position" class="certificate-position" aria-live="polite" aria-atomic="true"></span>
+        <button type="button" id="certificate-next" class="certificate-arrow" aria-label="Next certificate">
+          <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
-    <div class="mt-4 pt-3 border-t border-twilight-border/40 text-[10px] text-rose-glow text-center">
-      <button type="button" class="hover:underline" data-certificate="${i}" aria-label="View ${c.title} full size">Click to view</button>
-    </div>
-  </div>`).join('');
+    <p class="certificate-gallery-hint"><i class="fa-solid fa-arrows-up-down" aria-hidden="true"></i> Scroll or use the arrows to explore</p>
+  </div>`;
 
-$('badge-list').innerHTML = badges.map(b => `
-  <div class="p-4 rounded-2xl bg-twilight border border-twilight-border flex items-center gap-4 group hover:border-rose-glow/50 transition">
+const certificateViewport = $('certificate-viewport');
+const certificateSlides = certificateViewport.querySelectorAll('.certificate-slide');
+const certificatePrevious = $('certificate-previous');
+const certificateNext = $('certificate-next');
+const certificatePosition = $('certificate-position');
+function updateCertificateNavigation() {
+  const index = Math.min(certificateSlides.length - 1, Math.round(certificateViewport.scrollTop / certificateViewport.clientHeight));
+  certificatePosition.textContent = `${String(index + 1).padStart(2, '0')} / ${String(certificateSlides.length).padStart(2, '0')}`;
+  certificatePrevious.disabled = index === 0;
+  certificateNext.disabled = index === certificateSlides.length - 1;
+}
+function moveCertificate(direction) {
+  const currentIndex = Math.round(certificateViewport.scrollTop / certificateViewport.clientHeight);
+  const nextIndex = Math.max(0, Math.min(certificateSlides.length - 1, currentIndex + direction));
+  certificateViewport.scrollTo({
+    top: nextIndex * certificateViewport.clientHeight,
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+  });
+}
+certificatePrevious.addEventListener('click', () => moveCertificate(-1));
+certificateNext.addEventListener('click', () => moveCertificate(1));
+certificateViewport.addEventListener('scroll', updateCertificateNavigation);
+certificateViewport.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+    e.preventDefault();
+    moveCertificate(e.key === 'ArrowDown' ? 1 : -1);
+  }
+});
+updateCertificateNavigation();
+
+$('badge-list').innerHTML = badges.map((b, index) => `
+  <div class="achievement-float p-4 rounded-2xl bg-twilight border border-twilight-border flex items-center gap-4 group hover:border-rose-glow/50 transition" style="--achievement-delay: ${(index + certs.length) * 350}ms">
     <button type="button" data-image-preview class="w-16 h-16 rounded-xl shrink-0 overflow-hidden" aria-label="View ${b.title} badge full size">
       <img src="${b.img}" alt="${b.title} badge" class="w-full h-full rounded-xl object-cover bg-black border border-twilight-border">
     </button>
@@ -145,8 +202,8 @@ $('badge-list').innerHTML = badges.map(b => `
     <p class="text-[11px] text-parchment-muted mt-1">${b.desc}</p><span class="text-[10px] text-zinc-500">${b.date}</span></div>
   </div>`).join('');
 
-$('seminar-list').innerHTML = seminars.map(s => `
-  <div class="p-4 rounded-2xl bg-twilight border border-twilight-border flex flex-col sm:flex-row items-center gap-4 hover:border-rose-glow/40 transition">
+$('seminar-list').innerHTML = seminars.map((s, index) => `
+  <div class="achievement-float p-4 rounded-2xl bg-twilight border border-twilight-border flex flex-col sm:flex-row items-center gap-4 hover:border-rose-glow/40 transition" style="--achievement-delay: ${(index + certs.length + badges.length) * 350}ms">
     <button type="button" data-image-preview class="w-full sm:w-28 h-20 rounded-xl shrink-0 overflow-hidden" aria-label="View ${s.title} image full size">
       <img src="${s.img}" alt="${s.title} certificate" class="w-full h-full rounded-xl object-cover bg-black border border-zinc-800">
     </button>
@@ -165,9 +222,40 @@ $('contact-list').innerHTML = contacts.map(c => `
     ${c.href ? `<a href="${c.href}" class="text-sm font-medium text-white hover:text-rose-glow transition break-all">${c.text}</a>` : `<span class="text-sm font-medium text-white">${c.text}</span>`}</div>
   </div>`).join('');
 
-/* ============ PROJECT MODAL ============ */
 const modal = $('project-modal');
 const imageModal = $('image-modal');
+const imageModalImg = $('image-modal-img');
+let imagePreviewTrigger = null;
+let previousBodyOverflow = '';
+function openImagePreview(trigger) {
+  const image = trigger.querySelector('img');
+  if (!image) return;
+
+  imagePreviewTrigger = trigger;
+  previousBodyOverflow = document.body.style.overflow;
+  imageModalImg.src = image.src;
+  imageModalImg.alt = image.alt;
+  $('image-modal-title').textContent = image.alt;
+  imageModal.classList.replace('hidden', 'flex');
+  document.body.style.overflow = 'hidden';
+  $('image-modal-close').focus();
+}
+function closeImagePreview() {
+  if (imageModal.classList.contains('hidden')) return;
+
+  imageModal.classList.replace('flex', 'hidden');
+  imageModalImg.removeAttribute('src');
+  imageModalImg.alt = '';
+  document.body.style.overflow = previousBodyOverflow;
+  if (imagePreviewTrigger) imagePreviewTrigger.focus();
+  imagePreviewTrigger = null;
+}
+document.addEventListener('click', (e) => {
+  const trigger = e.target.closest('[data-image-preview]');
+  if (trigger) openImagePreview(trigger);
+});
+imageModal.addEventListener('click', (e) => { if (e.target === imageModal) closeImagePreview(); });
+$('image-modal-close').addEventListener('click', closeImagePreview);
 function openProject(i) {
   const p = projects[i];
   $('modal-img').src = p.img; $('modal-img').alt = p.title + ' preview';
@@ -182,9 +270,30 @@ $('project-grid').addEventListener('click', (e) => { const c = e.target.closest(
 $('project-grid').addEventListener('keydown', (e) => { const c = e.target.closest('[data-project]'); if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openProject(+c.dataset.project); } });
 $('modal-close').addEventListener('click', closeProject);
 modal.addEventListener('click', (e) => { if (e.target === modal) closeProject(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProject(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (!imageModal.classList.contains('hidden')) closeImagePreview();
+    else closeProject();
+  }
+});
 
-/* ============ MOBILE MENU ============ */
+const themeToggle = $('theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+function setTheme(isLight) {
+  document.body.classList.toggle('light-mode', isLight);
+  themeToggle.setAttribute('aria-pressed', String(isLight));
+  themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+  themeToggle.title = `Switch to ${isLight ? 'dark' : 'light'} mode`;
+  themeIcon.classList.toggle('fa-sun', !isLight);
+  themeIcon.classList.toggle('fa-moon', isLight);
+}
+setTheme(localStorage.getItem('portfolio-theme') === 'light');
+themeToggle.addEventListener('click', () => {
+  const isLight = !document.body.classList.contains('light-mode');
+  localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+  setTheme(isLight);
+});
+
 const menu = $('mobile-menu'), menuBtn = $('menu-btn');
 menuBtn.addEventListener('click', () => {
   const open = menu.classList.toggle('hidden') === false;
@@ -192,14 +301,12 @@ menuBtn.addEventListener('click', () => {
 });
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', false); }));
 
-/* ============ CONTACT FORM (opens the visitor's email app) ============ */
 $('contact-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const body = `${$('f-message').value}\n\nFrom: ${$('f-name').value} (${$('f-email').value})`;
   window.location.href = `mailto:zeftan0130@gmail.com?subject=${encodeURIComponent($('f-subject').value)}&body=${encodeURIComponent(body)}`;
 });
 
-/* ============ SPARKLE CURSOR ============ */
 const canvas = $('sparkle-canvas'), ctx = canvas.getContext('2d');
 const sparkleColors = ['#ff7eb3', '#ffd1e3', '#ffffff', '#c93774', '#9ec19d'];
 const particles = [];
@@ -236,7 +343,6 @@ function animate() {
 }
 animate();
 
-/* ============ INTERACTIVE VINES (sway near the mouse, drag to move) ============ */
 const vineSVG = `
 <svg viewBox="0 0 160 800" fill="none" class="w-full h-auto">
   <path d="M 20 0 Q 60 180 30 350 T 70 650 Q 40 750 20 800" stroke="transparent" stroke-width="28" stroke-linecap="round"/>
@@ -266,7 +372,7 @@ function createVine(side) {
   const set = (tx, ty, visualRot) =>
     el.style.transform = `translate(${tx}px, ${ty}px) scaleX(${sx}) rotate(${visualRot * sx}deg)`;
   set(0, 0, 0);
-  if (!canDrag) return; // phones/tablets: decorative only, so scrolling is never blocked
+  if (!canDrag) return;
 
   let drag = null;
   addEventListener('mousemove', (e) => {
@@ -295,7 +401,6 @@ function createVine(side) {
 createVine('left');
 createVine('right');
 
-/* ============ SCROLL REVEALS ============ */
 const revealTargets = document.querySelectorAll(
   'main > section:not(#home), footer, #education > div, #skill-tabs > button, #project-grid > article, #cert-grid > div, #badge-list > div, #seminar-list > div, #contact-list > div'
 );
