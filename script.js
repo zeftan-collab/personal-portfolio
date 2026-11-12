@@ -26,33 +26,33 @@ const skillCategories = {
 };
 
 const projects = [
-  { title: 'Campus Lost and Found System', img: 'images/project-lostfound.png', badge: 'Capstone', hover: 'text-moss-300', badgeColor: 'text-moss-300 border-moss-500/30', foot: '🎓 LCUP Community', category: 'Capstone Project', tags: ['PHP', 'MySQL', 'LCUP Portal'], desc: 'A campus-friendly system designed to help the LCUP community report, search for, and manage lost and found belongings.' },
-  { title: 'Student Attendance Monitoring', img: 'images/project-attendance.png', badge: 'App Dev', hover: 'text-pink-300', badgeColor: 'text-pink-300 border-pink-500/30', foot: '📋 Records Manager', category: 'Desktop Application', tags: ['C# / .NET', 'Database', 'Desktop App'], desc: 'A simple application that allows professors to monitor student attendance and manage attendance records efficiently.' },
-  { title: 'Café Website Design – Figma', img: 'images/project-cafe.png', badge: 'Figma UI/UX', hover: 'text-amber-300', badgeColor: 'text-amber-300 border-amber-500/30', foot: '📐 Design Concept', category: 'Figma Prototype', tags: ['Figma', 'UI/UX', 'Wireframing'], desc: 'A conceptual coffee shop website design focused on creating an appealing layout and user-friendly interface.' }
+  { title: 'Campus Lost and Found System', img: 'images/project-lostfound.jpg', badge: 'Capstone', hover: 'text-moss-300', badgeColor: 'text-moss-300 border-moss-500/30', foot: '🎓 LCUP Community', category: 'Capstone Project', tags: ['PHP', 'MySQL', 'LCUP Portal'], desc: 'A campus-friendly system designed to help the LCUP community report, search for, and manage lost and found belongings.' },
+  { title: 'Student Attendance Monitoring', img: 'images/project-attendance.jpg', badge: 'App Dev', hover: 'text-pink-300', badgeColor: 'text-pink-300 border-pink-500/30', foot: '📋 Records Manager', category: 'Desktop Application', tags: ['C# / .NET', 'Database', 'Desktop App'], desc: 'A simple application that allows professors to monitor student attendance and manage attendance records efficiently.' },
+  { title: 'Café Website Design – Figma', img: 'images/project-cafe.jpg', badge: 'Figma UI/UX', hover: 'text-amber-300', badgeColor: 'text-amber-300 border-amber-500/30', foot: '📐 Design Concept', category: 'Figma Prototype', tags: ['Figma', 'UI/UX', 'Wireframing'], desc: 'A conceptual coffee shop website design focused on creating an appealing layout and user-friendly interface.' }
 ];
 
 const certs = [
-  { img: 'images/cert-mos.png', issuer: 'Microsoft Certified', color: 'text-rose-glow', title: 'MOS: Excel Associate (Office 2019)', desc: 'Fundamental understanding of Excel: cell formatting, references, formulas, and workbook organization.', left: 'May 21, 2024', right: 'X66c-XM8H' },
-  { img: 'images/cert-html-css.png', issuer: 'Top 25% Rank', color: 'text-emerald-400', title: 'HTML/CSS Certification', desc: 'Evaluated through work-sample testing to verify real-world markup and styling skills.', left: 'TestDome Verified', right: 'Aug 8, 2026' },
-  { img: 'images/cert-security.png', issuer: 'CloudSwyft & Microsoft', color: 'text-sky-400', title: 'Enterprise Security', desc: 'Completed in partnership with LCUP Center for Lifelong Learning, exploring enterprise protection principles.', left: 'LCUP Partnership', right: 'April 22, 2026' },
-  { img: 'images/cert-csharp.png', issuer: 'freeCodeCamp & Microsoft', color: 'text-pink-300', title: 'Foundational C# Certification', desc: 'Verifies syntax logic, variables, conditionals, and object-oriented C# patterns.', left: 'Verified Credential', right: 'October 7, 2025' }
+  { img: 'images/cert-mos.jpg', issuer: 'Microsoft Certified', color: 'text-rose-glow', title: 'MOS: Excel Associate (Office 2019)', desc: 'Fundamental understanding of Excel: cell formatting, references, formulas, and workbook organization.' },
+  { img: 'images/cert-html-css.jpg', issuer: 'Top 25% Rank', color: 'text-emerald-400', title: 'HTML/CSS Certification', desc: 'Evaluated through work-sample testing to verify real-world markup and styling skills.' },
+  { img: 'images/cert-security.jpg', issuer: 'CloudSwyft & Microsoft', color: 'text-sky-400', title: 'Enterprise Security', desc: 'Completed in partnership with LCUP Center for Lifelong Learning, exploring enterprise protection principles.' },
+  { img: 'images/cert-csharp.jpg', issuer: 'freeCodeCamp & Microsoft', color: 'text-pink-300', title: 'Foundational C# Certification', desc: 'Verifies syntax logic, variables, conditionals, and object-oriented C# patterns.' }
 ];
 
 const badges = [
-  { img: 'images/badge-iot.png', issuer: 'Cisco Academy', color: 'text-moss-300', title: 'Introduction to IoT', desc: 'Digital transformation & connected device systems.', date: 'Issued Dec 06, 2025' },
-  { img: 'images/badge-mos.png', issuer: 'Microsoft', color: 'text-rose-glow', title: 'Excel Associate 2019', desc: 'Formulas, tables, data modeling & workbooks.', date: 'Issued May 21, 2024' }
+  { img: 'images/badge-iot.jpg', issuer: 'Cisco Academy', color: 'text-moss-300', title: 'Introduction to IoT', desc: 'Digital transformation & connected device systems.', date: 'Issued Dec 06, 2025' },
+  { img: 'images/badge-mos.jpg', issuer: 'Microsoft', color: 'text-rose-glow', title: 'Excel Associate 2019', desc: 'Formulas, tables, data modeling & workbooks.', date: 'Issued May 21, 2024' }
 ];
 
 const seminars = [
-  { img: 'images/seminar-kadakareer.png', tag: 'Career Webinar', date: 'Sept 16, 2026', title: 'KadaKareer Pace Level Up V.7.1', org: '', desc: 'Active participation in professional IT upskilling, mentorship, and career roadmap formulation.' },
-  { img: 'images/seminar-ethical-hacking.png', tag: 'Tech & Ethics', date: 'Feb 2, 2024', title: 'Ethical Hacking: Juggling Technology and Morality', org: 'JPSSITE - LCUP', desc: 'Explored ethical dimensions of cybersecurity, vulnerability disclosure, and IT responsibilities.' }
+  { img: 'images/seminar-kadakareer.jpg', tag: 'Career Webinar', date: 'Sept 16, 2026', title: 'KadaKareer Pace Level Up V.7.1', org: '', desc: 'Active participation in professional IT upskilling, mentorship, and career roadmap formulation.' },
+  { img: 'images/seminar-ethical-hacking.jpg', tag: 'Tech & Ethics', date: 'Feb 2, 2024', title: 'Ethical Hacking: Juggling Technology and Morality', org: 'JPSSITE - LCUP', desc: 'Explored ethical dimensions of cybersecurity, vulnerability disclosure, and IT responsibilities.' }
 ];
 
 const contacts = [
   { icon: 'fa-phone', label: 'Contact Number', text: '09761770306', href: 'tel:09761770306' },
   { icon: 'fa-graduation-cap', label: 'Educational Email', text: 'zofiaelisse.tan@email.lcup.edu.ph', href: 'mailto:zofiaelisse.tan@email.lcup.edu.ph' },
   { icon: 'fa-envelope', label: 'Personal Email', text: 'zeftan0130@gmail.com', href: 'mailto:zeftan0130@gmail.com' },
-  { icon: 'fa-location-dot', label: 'Location & University', text: 'Bulacan, Philippines (LCUP)' }
+  { icon: 'fa-location-dot', label: 'Location & University', text: 'Malolos Bulacan, Philippines (LCUP)' }
 ];
 
 /* ============ RENDERING ============ */
@@ -85,8 +85,8 @@ function selectSkill(key) {
   $('detail-title').textContent = c.title;
   $('detail-desc').textContent = c.desc;
   $('detail-count').textContent = `${c.skills.length} skill${c.skills.length > 1 ? 's' : ''}`;
-  $('detail-skills-list').innerHTML = c.skills.map(([name, desc, level]) => `
-    <div class="p-4 rounded-2xl bg-twilight/90 border border-twilight-border hover:border-rose-glow/40 transition flex flex-col justify-between">
+  $('detail-skills-list').innerHTML = c.skills.map(([name, desc, level], index) => `
+    <div class="skill-detail-item p-4 rounded-2xl bg-twilight/90 border border-twilight-border hover:border-rose-glow/40 transition flex flex-col justify-between" style="--skill-delay: ${index * 110}ms">
       <div>
         <div class="flex items-center justify-between gap-2 mb-2"><h5 class="text-sm font-bold text-white font-fairytale">${name}</h5>
         <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-deep/20 text-rose-glow border border-rose-glow/30 text-center">${level || 'Beginner'}</span></div>
@@ -101,12 +101,15 @@ $('skill-tabs').addEventListener('click', (e) => {
 });
 selectSkill('web-dev');
 
+const cornerVine = `<svg viewBox="0 0 140 140" fill="none" class="absolute top-0 left-0 w-28 h-28 z-20 pointer-events-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"><path d="M-4 12 C18 6, 44 14, 52 35 C58 52, 42 70, 36 88 C30 106, 40 120, 48 138" stroke="#3e5c38" stroke-width="3" stroke-linecap="round"/><path d="M22 20 Q34 6 50 14 Q38 30 22 20 Z" fill="#2e522b" stroke="#5f9964"/><path d="M50 34 Q68 28 66 46 Q48 52 50 34 Z" fill="#43723d" stroke="#7ec279"/><path d="M38 60 Q20 54 26 72 Q44 74 38 60 Z" fill="#2d4a2b" stroke="#5a8c56"/><path d="M34 88 Q48 80 54 96 Q38 106 34 88 Z" fill="#3f6b39" stroke="#71ad6a"/><circle cx="22" cy="20" r="2.5" fill="#ff7eb3"/></svg>`;
+
 $('project-grid').innerHTML = projects.map((p, i) => `
   <article class="arch-card bg-twilight-card border border-twilight-border overflow-hidden flex flex-col group cursor-pointer" data-project="${i}" tabindex="0" role="button" aria-label="Preview ${p.title}">
     <div class="h-48 relative overflow-hidden bg-zinc-900 border-b border-twilight-border">
       <img src="${p.img}" alt="${p.title} preview" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
       <div class="absolute inset-0 bg-gradient-to-t from-twilight-card via-transparent to-transparent opacity-70"></div>
       <div class="absolute inset-1.5 border border-moss-500/30 rounded-t-[3.8rem] pointer-events-none"></div>
+      ${cornerVine}
       <span class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-twilight-card/90 border backdrop-blur-md ${p.badgeColor}">${p.badge}</span>
     </div>
     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
@@ -119,7 +122,7 @@ $('project-grid').innerHTML = projects.map((p, i) => `
     </div>
   </article>`).join('');
 
-$('cert-grid').innerHTML = certs.map(c => `
+$('cert-grid').innerHTML = certs.map((c, i) => `
   <div class="bg-gradient-to-b from-[#18131d] to-twilight-card border border-twilight-border hover:border-rose-glow/60 p-5 rounded-3xl transition duration-300 hover:-translate-y-1.5 group flex flex-col justify-between">
     <div>
       <div class="h-44 rounded-2xl overflow-hidden bg-black/50 border border-twilight-border mb-4"><img src="${c.img}" alt="${c.title} certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"></div>
@@ -127,12 +130,16 @@ $('cert-grid').innerHTML = certs.map(c => `
       <h4 class="font-fairytale text-sm text-white font-bold mt-1">${c.title}</h4>
       <p class="text-parchment-muted text-xs mt-2 leading-relaxed">${c.desc}</p>
     </div>
-    <div class="mt-4 pt-3 border-t border-twilight-border/40 text-[10px] text-moss-300 flex justify-between"><span>${c.left}</span><span class="text-rose-glow">${c.right}</span></div>
+    <div class="mt-4 pt-3 border-t border-twilight-border/40 text-[10px] text-rose-glow text-center">
+      <button type="button" class="hover:underline" data-certificate="${i}" aria-label="View ${c.title} full size">Click to view</button>
+    </div>
   </div>`).join('');
 
 $('badge-list').innerHTML = badges.map(b => `
   <div class="p-4 rounded-2xl bg-twilight border border-twilight-border flex items-center gap-4 group hover:border-rose-glow/50 transition">
-    <img src="${b.img}" alt="${b.title} badge" class="w-16 h-16 rounded-xl object-cover bg-black shrink-0 border border-twilight-border">
+    <button type="button" data-image-preview class="w-16 h-16 rounded-xl shrink-0 overflow-hidden" aria-label="View ${b.title} badge full size">
+      <img src="${b.img}" alt="${b.title} badge" class="w-full h-full rounded-xl object-cover bg-black border border-twilight-border">
+    </button>
     <div><span class="text-[10px] ${b.color} font-semibold uppercase tracking-wider">${b.issuer}</span>
     <h4 class="font-fairytale text-xs text-white font-bold mt-0.5">${b.title}</h4>
     <p class="text-[11px] text-parchment-muted mt-1">${b.desc}</p><span class="text-[10px] text-zinc-500">${b.date}</span></div>
@@ -140,7 +147,9 @@ $('badge-list').innerHTML = badges.map(b => `
 
 $('seminar-list').innerHTML = seminars.map(s => `
   <div class="p-4 rounded-2xl bg-twilight border border-twilight-border flex flex-col sm:flex-row items-center gap-4 hover:border-rose-glow/40 transition">
-    <img src="${s.img}" alt="${s.title} certificate" class="w-full sm:w-28 h-20 rounded-xl object-cover bg-black shrink-0 border border-zinc-800">
+    <button type="button" data-image-preview class="w-full sm:w-28 h-20 rounded-xl shrink-0 overflow-hidden" aria-label="View ${s.title} image full size">
+      <img src="${s.img}" alt="${s.title} certificate" class="w-full h-full rounded-xl object-cover bg-black border border-zinc-800">
+    </button>
     <div class="flex-1">
       <div class="flex items-center justify-between"><span class="text-[10px] font-semibold text-rose-glow uppercase tracking-wider">${s.tag}</span><span class="text-[10px] text-zinc-500">${s.date}</span></div>
       <h4 class="font-fairytale text-xs text-white font-bold mt-1">${s.title}</h4>
@@ -158,6 +167,7 @@ $('contact-list').innerHTML = contacts.map(c => `
 
 /* ============ PROJECT MODAL ============ */
 const modal = $('project-modal');
+const imageModal = $('image-modal');
 function openProject(i) {
   const p = projects[i];
   $('modal-img').src = p.img; $('modal-img').alt = p.title + ' preview';
@@ -225,3 +235,86 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+/* ============ INTERACTIVE VINES (sway near the mouse, drag to move) ============ */
+const vineSVG = `
+<svg viewBox="0 0 160 800" fill="none" class="w-full h-auto">
+  <path d="M 20 0 Q 60 180 30 350 T 70 650 Q 40 750 20 800" stroke="transparent" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 20 0 Q 60 180 30 350 T 70 650 Q 40 750 20 800" stroke="#2a452a" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 20 0 Q 60 180 30 350 T 70 650 Q 40 750 20 800" stroke="#4e7b51" stroke-width="2" stroke-dasharray="12 4" stroke-linecap="round"/>
+  <g fill="#365e38" stroke="#5f9964" stroke-width="1.2">
+    <path d="M35 80 C65 60, 85 90, 75 110 C65 125, 40 115, 35 80 Z"/>
+    <path d="M25 180 C0 160, -10 200, 10 215 C25 220, 30 195, 25 180 Z"/>
+    <path d="M42 280 C80 260, 95 300, 75 320 C55 335, 40 305, 42 280 Z"/>
+    <path d="M30 410 C-5 400, 0 450, 20 460 C40 465, 45 430, 30 410 Z"/>
+    <path d="M55 520 C95 500, 110 550, 85 570 C65 580, 50 550, 55 520 Z"/>
+    <path d="M48 640 C15 630, 20 685, 45 690 C70 690, 65 655, 48 640 Z"/>
+  </g>
+  <circle cx="75" cy="110" r="5" fill="#ff7eb3"/><circle cx="10" cy="215" r="4.5" fill="#ffd1e3"/>
+  <circle cx="75" cy="320" r="6" fill="#c93774"/><circle cx="85" cy="570" r="5.5" fill="#ff7eb3"/>
+</svg>`;
+
+const canDrag = matchMedia('(min-width: 768px) and (pointer: fine)').matches;
+
+function createVine(side) {
+  const flip = side === 'right', sx = flip ? -1 : 1;
+  const el = document.createElement('div');
+  el.className = `vine vine-${side}`;
+  el.innerHTML = vineSVG;
+  document.body.appendChild(el);
+
+  const set = (tx, ty, visualRot) =>
+    el.style.transform = `translate(${tx}px, ${ty}px) scaleX(${sx}) rotate(${visualRot * sx}deg)`;
+  set(0, 0, 0);
+  if (!canDrag) return; // phones/tablets: decorative only, so scrolling is never blocked
+
+  let drag = null;
+  addEventListener('mousemove', (e) => {
+    if (drag) return;
+    const range = 280;
+    const dist = flip ? e.clientX - (innerWidth - range) : range - e.clientX;
+    const f = Math.max(0, Math.min(1, dist / range));
+    set((flip ? -1 : 1) * f * 14, 0, (flip ? -1 : 1) * f * 8);
+  });
+  el.addEventListener('pointerdown', (e) => {
+    drag = { x: e.clientX, y: e.clientY };
+    el.setPointerCapture(e.pointerId);
+    el.classList.add('dragging');
+    e.preventDefault();
+  });
+  el.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const dx = Math.max(-160, Math.min(160, e.clientX - drag.x));
+    const dy = Math.max(-120, Math.min(120, e.clientY - drag.y));
+    set(dx, dy, dx * 0.1);
+  });
+  const release = () => { if (!drag) return; drag = null; el.classList.remove('dragging'); set(0, 0, 0); };
+  el.addEventListener('pointerup', release);
+  el.addEventListener('pointercancel', release);
+}
+createVine('left');
+createVine('right');
+
+/* ============ SCROLL REVEALS ============ */
+const revealTargets = document.querySelectorAll(
+  'main > section:not(#home), footer, #education > div, #skill-tabs > button, #project-grid > article, #cert-grid > div, #badge-list > div, #seminar-list > div, #contact-list > div'
+);
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+
+  revealTargets.forEach((target, index) => {
+    target.classList.add('scroll-reveal');
+    target.style.setProperty('--reveal-delay', `${(index % 4) * 80}ms`);
+    revealObserver.observe(target);
+  });
+} else {
+  revealTargets.forEach(target => target.classList.add('is-visible'));
+}
